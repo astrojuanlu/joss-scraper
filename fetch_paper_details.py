@@ -9,7 +9,7 @@ from dateutil.parser import parse
 def get_response(page_url):
     """Returns response to html request on page_url"""
     response = requests.get(page_url)
-    print(page_url, response.status_code)
+    # print(page_url, response.status_code)
     return response
 
 def main():

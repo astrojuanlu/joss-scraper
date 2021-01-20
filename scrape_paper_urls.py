@@ -1,10 +1,9 @@
 from bs4 import BeautifulSoup as bs
 import requests
 import lxml
-import json
 
 INDEX_URL = "https://joss.theoj.org/papers/published?page="
-PAPER_URL_LIST = "paper_url_list.json"
+PAPER_URL_LIST = "data/paper_url_list.txt"
 
 def get_response(page_url):
     """Returns response to html request on page_url"""
@@ -32,6 +31,7 @@ def main():
         paper_urls += [entry.link.get('href') for entry in paper_entries]
 
     with open(PAPER_URL_LIST, 'w') as fp:
-        json.dump(paper_urls, fp)
+        for item in paper_urls:
+            fp.write("%s\n" % item)
 
 main()
