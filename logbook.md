@@ -41,9 +41,9 @@ Of the 1112 papers analysed, just under 25% of them use one of the more popular 
 
 ```
  13 circle-ci
-837 False
- 46 github-actions
- 66 github-folder
+845 False
+ 50 github-actions
+ 72 github-folder
  55 not-github
- 95 travis
+110 travis
 ```
