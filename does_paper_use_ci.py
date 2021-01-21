@@ -17,6 +17,19 @@ def which_ci(url):
         return 'not-github'
     response = get_response(url)
     soup = bs(response.content, 'lxml')
+
+    # This fetches the page associated with CI for the latest commit
+    # commit_rollup_path_obj = soup.find('include-fragment', class_='d-inline')
+    # if commit_rollup_path_obj:
+        # commit_rollup_path = commit_rollup_path_obj.get('src')
+    # else:
+        # return False
+    # commit_rollup_url = "https://github.com" + commit_rollup_path
+    # commit_response = get_response(commit_rollup_url)
+    # commit_soup = bs(commit_response.content, 'lxml')
+    # if commit_soup.find('svg', class_='octicon') == None:
+        # return False
+
     if soup.find('a', title='.circleci'):
         # Is there a folder called .circleci?
         return "circle-ci"
@@ -25,7 +38,7 @@ def which_ci(url):
         return "github-actions"
     elif soup.find('a', title='.github'):
         # GH renders a .github folder as an <a>
-        return "github-folder"
+        return "github-actions"
     elif soup.find('a', title='.travis.yml'):
         # Is there a file called .travis.yml?
         return "travis"
