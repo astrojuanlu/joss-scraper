@@ -47,3 +47,17 @@ Of the 1112 papers analysed, just under 25% of them use one of the more popular 
  55 not-github
 110 travis
 ```
+
+## Checking for Github's green tick
+
+Github's green tick is a way for GH to show whether a specific commit has passed CI-run tests (e.g. through travis/github actions). There are some browser extensions which use the presence of this to determine whether a codebase has CI enabled. I managed to scrape not just the presence of the tick from GH but any icon at all which indicates whether a repo has CI enabled. The results are depressing:
+```
+    3 circle-ci
+ 1063 False
+   15 github-actions
+   55 not-github
+    8 travis
+    1 Unknown
+```
+
+Here, if the CI icon (tick, cross, doesn't matter) is present, the code attempts to determine which CI platform is being used. So that's 1063 repos *without* an icon at all which means even if they have set up CI, it hasn't run on their latest commit...
