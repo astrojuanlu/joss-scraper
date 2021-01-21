@@ -2,6 +2,10 @@
 
 This is a project with the aim of discovering the number of papers submitted to JOSS which have some kind of CI set up.
 
+**Read [the blog post](http://blog.jamiejquinn.com/analysing-ci-in-joss)** for a better understanding than this README provides.
+
+## Logbook
+
 Using BeautifulSoup to scrape the [JOSS index](https://joss.theoj.org/papers?page=1) and produce a set of urls, one for each paper in the journal.
 
 Turns out only the ID on the end of the url is unique so we can use this as an ID for e.g. make:
@@ -39,6 +43,9 @@ I think this suggests we can get fairly valid statistics from concentrating only
 
 Of the 1112 papers analysed, just under 25% of them use one of the more popular CI platforms. Even assuming our False signal is overly sensitive to a degree, this is indicative of a large portion of scientific code not using any form of CI.
 
+![](./occurrences.png)
+
+Raw numbers:
 ```
  13 circle-ci
 845 False
