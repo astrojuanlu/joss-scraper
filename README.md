@@ -25,9 +25,15 @@ $ cd data
 $ cat paper_url_list.txt | sed 's/"//g' | sed 's/, /\n/g' | awk -F. '{print $5}' > id_list.txt
 ```
 
-Finally, generate the JSON data:
+Then generate the JSON data:
 
 ```
 $ cd ..
 $ make json
+```
+
+And finally, generate the CSV:
+
+```
+$ python generate_df.py
 ```
