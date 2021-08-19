@@ -25,9 +25,9 @@ $ cd data
 $ cat paper_url_list.txt | sed 's/"//g' | sed 's/, /\n/g' | awk -F. '{print $5}' > id_list.txt
 ```
 
-Finally, generate the data:
+Finally, generate the JSON data:
 
 ```
 $ cd ..
-$ make
+$ make json
 ```
