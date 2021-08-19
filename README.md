@@ -1,8 +1,22 @@
-# JOSS CI Coverage
+# JOSS documentation prevalence
 
-This is a project with the aim of discovering the number of papers submitted to JOSS which have some kind of CI set up.
+This is a project with the aim of discovering the nature of online documentation of papers submitted to JOSS.
 
-**Read [the blog post](http://blog.jamiejquinn.com/analysing-ci-in-joss)** for a better understanding than this README provides.
+(Forked from https://github.com/JamieJQuinn/joss-scraper)
+
+## Usage
+
+First, download all the URLs:
+
+```
+$ python scrape_paper_urls.py
+$ head -n5 data/paper_url_list.txt
+https://joss.theoj.org/papers/10.21105/joss.02095
+https://joss.theoj.org/papers/10.21105/joss.03394
+https://joss.theoj.org/papers/10.21105/joss.03374
+https://joss.theoj.org/papers/10.21105/joss.02276
+https://joss.theoj.org/papers/10.21105/joss.03456
+```
 
 ## Logbook
 
