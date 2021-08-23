@@ -5,7 +5,7 @@ import json
 import pandas as pd
 
 papers = []
-for paper_fname in glob("*.json"):
+for paper_fname in glob("data/*.json"):
     with open(paper_fname) as fh:
         paper = json.load(fh)
         paper["id"] = os.path.splitext(paper_fname)[0]
