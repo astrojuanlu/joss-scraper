@@ -43,7 +43,7 @@ $ python generate_df.py
 To extract the data of a specific paper:
 
 ```
-$ $ python fetch_paper_details.py "https://joss.theoj.org/papers/10.21105/joss.03362" | jq
+$ python fetch_paper_details.py "https://joss.theoj.org/papers/10.21105/joss.03362" | jq
 {
   "title": "OSTIR: open source translation initiation rate prediction",
   "submission_date": "2021-06-08 00:00:00",
